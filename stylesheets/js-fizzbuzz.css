@@ -130,6 +130,28 @@ span {
   }
 }
 
+/* GO BACK STYLES */
+#go-back {
+  -moz-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 30px;
+  color: #000000;
+  background: rgba(255, 255, 255, 0.5);
+}
+#go-back:hover {
+  color: #ecede8;
+  background: rgba(0, 0, 0, 0.5);
+}
+
 /* HTML&BODY STYLES */
 html, body {
   height: 100%;
