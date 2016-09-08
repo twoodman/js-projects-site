@@ -6,14 +6,25 @@
   .projects__inner {
     text-align: center;
     width: 100%;
+    max-width: 980px;
     height: 100%;
+    ul {
+      @include display-flex();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      @include justify-content(center);
+      @include align-items(flex-start);
+      width: 100%;
+    }
+    ul li {
+      margin: 10px;
+    }
     a {
       @include transition-property(box-shadow, border, transform);
       @include transition-duration(200ms, 200ms, 200ms);
       @include transition-timing-function(ease);
       @include border-radius(3px);
       @include box-shadow(inset 0 0 0 2px $color-button-border);
-      margin: 10px 0 10px 0;
       display: inline-block;
       border-bottom: 5px solid $color-black;
       background: $color-black;
@@ -25,7 +36,8 @@
       &:hover {
         @include box-shadow(inset 0 0 0 2px $color-button-border-hover);
         @include translateY(5px);
-        border-bottom: 0px solid transparent;
+        @include background-clip(padding-box);
+        border-bottom: 3px solid rgba(0,0,0,0);
       }
     }
   }

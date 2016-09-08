@@ -8,9 +8,10 @@ Visit:
 - https://twoodman.github.io/js-projects-site
 
 
+*Minified files found in dist/*
 *Un-minified files included in respective folders*
 
 
 Projects:
 - FizzBuzz
-
+- Reverse String

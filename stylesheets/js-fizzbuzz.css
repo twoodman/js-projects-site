@@ -54,6 +54,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* BASE STYLES */
 html, body {
   height: 100%;
   width: 100%;
@@ -224,6 +225,18 @@ html, body {
   max-width: 980px;
   color: #ecede8;
   border: 1px solid #ecede8;
+}
+#form__fizzbuzz input[type='text']:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+#form__fizzbuzz input[type='text']::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+#form__fizzbuzz input[type='text']:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+#form__fizzbuzz input[type='text']::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 #form__fizzbuzz p {
   text-align: center;

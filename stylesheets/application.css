@@ -193,7 +193,24 @@ span {
 .main__projects .projects__inner {
   text-align: center;
   width: 100%;
+  max-width: 980px;
   height: 100%;
+}
+.main__projects .projects__inner ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.main__projects .projects__inner ul li {
+  margin: 10px;
 }
 .main__projects .projects__inner a {
   -moz-transition-property: box-shadow, border, -moz-transform;
@@ -214,7 +231,6 @@ span {
   -moz-box-shadow: inset 0 0 0 2px #474747;
   -webkit-box-shadow: inset 0 0 0 2px #474747;
   box-shadow: inset 0 0 0 2px #474747;
-  margin: 10px 0 10px 0;
   display: inline-block;
   border-bottom: 5px solid #000000;
   background: #000000;
@@ -232,5 +248,9 @@ span {
   -ms-transform: translateY(5px);
   -webkit-transform: translateY(5px);
   transform: translateY(5px);
-  border-bottom: 0px solid transparent;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  border-bottom: 3px solid transparent;
 }

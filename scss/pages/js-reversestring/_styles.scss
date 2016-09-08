@@ -9,7 +9,7 @@
 }
 /* MAIN STYLES */
 .main {
-  @include background-image(linear-gradient(to top right, #516395, #614385));
+  @include background-image(linear-gradient(to top right, #eaecc6, #2bc0e4));
   $svg-gradient-shim-threshold: 1 !global;
   width: 100%;
   min-height: 100%;
@@ -49,7 +49,7 @@
   }
 }
 /* FORM STYLES */
-#form__fizzbuzz {
+#form__reversestring {
   @include display-flex();
   @include flex-direction(column);
   @include flex-wrap(nowrap);
@@ -60,7 +60,7 @@
   margin: 25px auto 25px auto;
   input[type='text'] {
     @include input-placeholder {
-      color: $color-placeholder-transparent-white;
+      color: $color-placeholder-transparent-black;
     }
     display: block;
     text-align: center;
@@ -69,16 +69,13 @@
     height: 20px;
     width: 100%;
     max-width: 980px;
-    color: $color-bone;
-    border: 1px solid $color-bone;
+    color: $color-black;
+    border: 1px solid $color-black;
   }
   p {
     text-align: center;
     width: 100%;
     height: 10px;
-  }
-  span.error {
-    color: #f1c40f;
   }
 }
 /* MAIN OUTPUT STYLES */
@@ -92,19 +89,5 @@
   max-width: 980px;
   min-height: 100%;
   margin: 0 auto;
-  span {
-    min-width: 30px;
-    height: 15px;
-    color: $color-bone;
-    background: $color-black;
-  }
-  .output__fizz {
-    background: #317589;
-  }
-  .output__buzz {
-    background: #049372;
-  }
-  .output__fizzbuzz {
-    background: #c91f37;
-  }
+  color: $color-black;
 }
