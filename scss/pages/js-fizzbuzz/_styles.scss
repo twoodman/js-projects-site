@@ -1,0 +1,107 @@
+ /* HTML&BODY STYLES */
+ html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: $base-font-size;
+  color: $color-bone;
+}
+/* MAIN STYLES */
+.main {
+  @include background-image(linear-gradient(to top right, #516395, #614385));
+  $svg-gradient-shim-threshold: 1 !global;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+/* MAIN BANNER STYLES */
+.main__banner {
+  @include display-flex();
+  @include flex-wrap(nowrap);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  width: 100%;
+  height: 60px;
+  background: $color-black;
+  h1 {
+    font-size: $base-font-size + 4;
+    font-weight: bolder;
+    font-family: $sans-stack;
+    @media #{$break-960} {
+      font-size: $base-font-size + 6;
+    }
+  }
+  a {
+    @include single-transition(color, 300ms, ease);
+    font-family: $sans-stack;
+    font-size: $base-font-size;
+    color: $color-bone;
+    padding: 0;
+    text-decoration: underline;
+    &:hover {
+      color: $color-hover;
+    }
+    @media #{$break-960} {
+      font-size: $base-font-size + 2;
+    }
+  }
+}
+/* FORM STYLES */
+#form__fizzbuzz {
+  @include display-flex();
+  @include flex-direction(column);
+  @include flex-wrap(nowrap);
+  @include justify-content(center);
+  @include align-items(center);
+  width: 85%;
+  height: 60px;
+  margin: 25px auto 25px auto;
+  input[type='text'] {
+    display: block;
+    text-align: center;
+    background: transparent;
+    padding: 10px;
+    height: 20px;
+    width: 100%;
+    max-width: 980px;
+    color: $color-bone;
+    border: 1px solid $color-bone;
+  }
+  p {
+    text-align: center;
+    width: 100%;
+    height: 10px;
+  }
+  span.error {
+    color: #f1c40f;
+  }
+}
+/* MAIN OUTPUT STYLES */
+#main__output {
+  @include display-flex();
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include align-items(flex-start);
+  width: 85%;
+  max-width: 980px;
+  min-height: 100%;
+  margin: 0 auto;
+  span {
+    min-width: 30px;
+    height: 15px;
+    color: $color-bone;
+    background: $color-black;
+  }
+  .output__fizz {
+    background: #317589;
+  }
+  .output__buzz {
+    background: #049372;
+  }
+  .output__fizzbuzz {
+    background: #c91f37;
+  }
+}

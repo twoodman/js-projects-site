@@ -1,0 +1,33 @@
+.main__banner {
+  @include display-flex();
+  @include flex-wrap(nowrap);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  width: 100%;
+  height: 60px;
+  background: $color-black;
+  margin-bottom: 25px;
+  h1 {
+    font-size: $base-font-size + 4;
+    font-weight: bolder;
+    font-family: $sans-stack;
+    @media #{$break-960} {
+      font-size: $base-font-size + 6;
+    }
+  }
+  a {
+    @include single-transition(color, 300ms, ease);
+    font-family: $sans-stack;
+    font-size: $base-font-size;
+    color: $color-bone;
+    padding: 0;
+    text-decoration: underline;
+    &:hover {
+      color: $color-hover;
+    }
+    @media #{$break-960} {
+      font-size: $base-font-size + 2;
+    }
+  }
+}

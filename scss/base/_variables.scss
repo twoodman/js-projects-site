@@ -1,0 +1,16 @@
+// colours
+$color-grad-1 : #F09819; // darker colour in bg gradient
+$color-grad-2 : #FF512F; // lighter colour in bg gradient
+$color-hover : $color-grad-2; // used in link button hover
+$color-black : #000000; // colour used in banner bg and other
+$color-button-border : #474747; // used in...you guessed it! button borders.
+$color-button-border-hover : #2ecc71; // used in button border hover effect
+$color-bone : #ecede8; // used in most text
+// fonts
+$base-font-size : 16px; // base font size..
+
+// font stacks
+$sans-stack : 'Ubuntu', sans-serif;
+
+// media breaks
+$break-960 : '(min-width: 960px)'; // 960px break to make font size larger
