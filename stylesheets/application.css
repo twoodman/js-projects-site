@@ -54,6 +54,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* BASE STYLES */
 html, body {
   height: 100%;
   width: 100%;
@@ -129,12 +130,14 @@ span {
   }
 }
 
+/* MAIN STYLES*/
 .main {
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
 }
 
+/* MAIN BANNER STYLES */
 .main__banner {
   display: -webkit-flex;
   display: flex;
@@ -181,6 +184,7 @@ span {
   }
 }
 
+/* MAIN PROJECTS STYLES */
 .main__projects {
   max-width: 980px;
   margin: 0 auto;
