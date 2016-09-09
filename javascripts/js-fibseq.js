@@ -95,14 +95,21 @@
       + The first time this function runs,
       + this number will be 1, which is, again,
       + the number assigned to numAt in the latter assignment.
-      +
+      */
       arrFib[i] = numAt;
-      // numAt equal to new value at current index
-      numAt = arrFib[i];
-      // output numAt (current arrFib index value)
-      outputToDiv(numAt, 'output');
+
+      /*
+      + then call outputToDiv
+      + which outputs a span to the mainOutput
+      + with a passed in class, in this case 'output'
+      */
+      outputToDiv(arrFib[i], 'output');
     }
-    // output the original sequence number to get
+
+    /*
+    + output the original given number to div
+    + just to show what was passed in
+    */
     outputToDiv(' | FibSeq Position: ' + num, 'output__alt');
   }
 
