@@ -58,7 +58,8 @@
     getFibSequence(num);
   }
 
-  /* GET YOU SOME FIBONACCI GOODNESS
+  /*
+  + GET YOU SOME FIBONACCI GOODNESS
   + AKA: THE BIG BOY
   */
   function getFibSequence(num) {
