@@ -291,6 +291,11 @@ html, body {
   height: 15px;
   color: #ecede8;
   background: #000000;
+  padding: 10px;
+  border-right: 2px solid #ecede8;
+}
+#main__output .output:last-child, #main__output .output__alt:last-child {
+  border-right: none;
 }
 #main__output .output__alt {
   background: #26c281;

@@ -97,6 +97,11 @@
     height: 15px;
     color: $color-bone;
     background: $color-black;
+    padding: 10px;
+    border-right: 2px solid $color-bone;
+    &:last-child {
+      border-right: none;
+    }
   }
   .output__alt {
     @extend .output;
