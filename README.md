@@ -1,10 +1,10 @@
-#### Vanilla JS Projects Repo
+## Vanilla JS Projects Repo
 ----
 
 ***A lot of these projects are taken from [here](https://github.com/karan/Projects)***
 
 
-Visit:
+#### Visit:
 - https://twoodman.github.io/js-projects-site
 
 
@@ -12,6 +12,11 @@ Visit:
 *Un-minified files included in respective folders*
 
 
-Projects:
-- FizzBuzz
-- Reverse String
+#### Projects:
+
+#### Text/Strings
+  - FizzBuzz
+  - Reverse String
+
+#### Numbers
+  - Fibonacci Sequence
