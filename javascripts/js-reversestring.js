@@ -3,7 +3,7 @@
   // strict
   'use strict'
   // get main output div
-  var outputMain = document.getElementById('main__output')
+  const outputMain = document.getElementById('main__output')
 
   // add event listener to form submit event
   document.getElementById('form__reversestring').addEventListener('submit', (event) => {
@@ -19,7 +19,7 @@
   // check input
   function checkInput () {
     // get form submit value
-    var value = document.getElementById('form__submit').value
+    let value = document.getElementById('form__submit').value
     // get reverse string
     getReverseString(value)
     // clear input on submit
@@ -33,11 +33,11 @@
       outputMain.removeChild(outputMain.firstChild)
     }
     // get main output
-    var formOutput = document.getElementById('main__output')
+    const formOutput = document.getElementById('main__output')
     // convert given string to array and reverse it
-    var arrayString = str.split('').reverse()
+    const arrayString = str.split('').reverse()
     // join reversed array to convert back to string
-    var reversedString = arrayString.join('')
+    const reversedString = arrayString.join('')
     /*
     + append reversed string to main output
     + this also escapes it by creating a text node
