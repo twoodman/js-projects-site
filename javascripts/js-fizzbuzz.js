@@ -3,9 +3,9 @@
   // strict
   'use strict'
   // initialize output text
-  var outputText = ''
+  let outputText = ''
   // get main output div
-  var outputMain = document.getElementById('main__output')
+  const outputMain = document.getElementById('main__output')
 
   // add event listener to form submit event
   document.getElementById('form__fizzbuzz').addEventListener('submit', (event) => {
@@ -21,8 +21,8 @@
   // check input
   function checkInput () {
     console.log('checked')
-    var value = document.getElementById('form__submit').value
-    var formOutput = document.getElementById('form__output')
+    let value = document.getElementById('form__submit').value
+    const formOutput = document.getElementById('form__output')
     if (isNaN(value)) {
       formOutput.innerHTML = '<span class="error">Numbers only, please.</span>'
       clearInput()
@@ -38,9 +38,9 @@
     // set output text to given arg
     outputText = text
     // create span for i
-    var spanOutput = document.createElement('span')
+    const spanOutput = document.createElement('span')
     // create text node for i
-    var outputContent = document.createTextNode(outputText)
+    const outputContent = document.createTextNode(outputText)
     // set span class to given arg
     spanOutput.className = type
     // append outputcontent (outputtext node) to span
@@ -53,9 +53,9 @@
       outputMain.removeChild(outputMain.firstChild)
     }
     // initialize i
-    var i = 1
+    let i = 1
     // max count
-    var countMax = num
+    const countMax = num
     // while loop to iterate through 1 to countmax
     while (i <= countMax) {
       // if i is a multiple of 3
