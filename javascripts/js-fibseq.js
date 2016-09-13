@@ -4,10 +4,10 @@
   'use strict'
 
   // initialize output text
-  var outputText = ''
+  let outputText = ''
 
   // get main output div
-  var outputMain = document.getElementById('main__output')
+  const outputMain = document.getElementById('main__output')
 
   // add event listener to form submit event
   document.getElementById('form__fibseq').addEventListener('submit', (event) => {
@@ -26,9 +26,9 @@
   // check input
   function checkInput () {
     // get form submit element
-    var value = document.getElementById('form__submit').value
+    let value = document.getElementById('form__submit').value
     // get form output element
-    var formOutput = document.getElementById('form__output')
+    const formOutput = document.getElementById('form__output')
     // if form submit value is not a number
     if (isNaN(value)) {
       // output error msg
@@ -66,7 +66,7 @@
   */
   function getFibSequence (num) {
     // MAKE A NICE ARRAY
-    var arrFib = []
+    let arrFib = []
 
     /*
     + set first two index to 0 and 1
@@ -92,7 +92,7 @@
       + this will be the number 1.
       + Because (2 - 1 = 1) + (2 - 2 = 0) = 1
       */
-      var numAt = arrFib[i - 1] + arrFib[i - 2]
+      let numAt = arrFib[i - 1] + arrFib[i - 2]
 
       /*
       + In the following, we are assigning to the CURRENT index:
