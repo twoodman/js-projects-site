@@ -1,83 +1,89 @@
 // iife to protect global scope
-(function() {
+(() => {
   // strict
-  'use strict';
+  'use strict'
+
   // initialize output text
-  var outputText = '';
+  var outputText = ''
+
   // get main output div
-  var outputMain = document.getElementById('main__output');
+  var outputMain = document.getElementById('main__output')
 
   // add event listener to form submit event
-  document.getElementById('form__fibseq').addEventListener('submit', function(event) {
+  document.getElementById('form__fibseq').addEventListener('submit', (event) => {
     // prevent browser default when clicked
-    event.preventDefault();
+    event.preventDefault()
     // call checkInput function
-    checkInput();
-  });
+    checkInput()
+  })
 
   // clear input
-  function clearInput() {
+  function clearInput () {
     // just clears form submit value
-    document.getElementById('form__submit').value = '';
+    document.getElementById('form__submit').value = ''
   }
 
   // check input
-  function checkInput() {
+  function checkInput () {
     // get form submit element
-    var value = document.getElementById('form__submit').value;
+    var value = document.getElementById('form__submit').value
     // get form output element
-    var formOutput = document.getElementById('form__output');
+    var formOutput = document.getElementById('form__output')
     // if form submit value is not a number
     if (isNaN(value)) {
       // output error msg
-      formOutput.innerHTML = '<span class="error">Numbers only, please.</span>';
+      formOutput.innerHTML = '<span class="error">Numbers only, please.</span>'
       // and clear input
-      clearInput();
+      clearInput()
     } else {
       // else clear error msg
-      formOutput.innerHTML = '';
+      formOutput.innerHTML = ''
       // call submitForm with the value submitted in form
-      submitForm(value);
+      submitForm(value)
       // and clear input
-      clearInput();
+      clearInput()
     }
   }
 
   // form submit to generate fibonacci sequence
-  function submitForm(num) {
+  function submitForm (num) {
     // while there are still children of outputMain element
     while (outputMain.firstChild) {
       // remove them
-      outputMain.removeChild(outputMain.firstChild);
+      outputMain.removeChild(outputMain.firstChild)
       /* note:
       + this is the quickest way I've found
       + to remove all children of a parent element
       */
     }
     // call THE BIG BOY
-    getFibSequence(num);
+    getFibSequence(num)
   }
 
   /*
   + GET YOU SOME FIBONACCI GOODNESS
   + AKA: THE BIG BOY
   */
-  function getFibSequence(num) {
+  function getFibSequence (num) {
     // MAKE A NICE ARRAY
-    var arrFib = [];
+    var arrFib = []
+
     /*
     + set first two index to 0 and 1
     + first two numbers of fib seq
     */
-    arrFib[0] = 0;
-    arrFib[1] = 1;
+    arrFib[0] = 0
+    arrFib[1] = 1
+
     // OUTPUT EM BOTH BEFORE LOOP
-    outputToDiv(arrFib[0], 'output');
-    outputToDiv(arrFib[1], 'output');
+    outputToDiv(arrFib[0], 'output')
+    outputToDiv(arrFib[1], 'output')
+
     // loop through from 2 to given num
     for (var i = 2; i <= num; i++) {
       // push i to array THIS IS VERY IMPORTANT
-      arrFib.push(i);
+      arrFib.push(i)
+
       /*
       + DECLARE a new variable to store
       + the SUM of the previous two
@@ -86,8 +92,7 @@
       + this will be the number 1.
       + Because (2 - 1 = 1) + (2 - 2 = 0) = 1
       */
-      var numAt = arrFib[i - 1] + arrFib[i - 2];
-
+      var numAt = arrFib[i - 1] + arrFib[i - 2]
 
       /*
       + In the following, we are assigning to the CURRENT index:
@@ -97,36 +102,36 @@
       + this number will be 1, which is, again,
       + the number assigned to numAt in the latter assignment.
       */
-      arrFib[i] = numAt;
+      arrFib[i] = numAt
 
       /*
       + then call outputToDiv
       + which outputs a span to the mainOutput
       + with a passed in class, in this case 'output'
       */
-      outputToDiv(arrFib[i], 'output');
+      outputToDiv(arrFib[i], 'output')
     }
 
     /*
     + output the original given number to div
     + just to show what was passed in
     */
-    outputToDiv(' | FibSeq Position: ' + num, 'output__alt');
+    outputToDiv(' | FibSeq Position: ' + num, 'output__alt')
   }
 
   // output span function
-  function outputToDiv(text, type) {
+  function outputToDiv (text, type) {
     // set output text to given arg
-    outputText = text;
+    outputText = text
     // create span for i
-    var spanOutput = document.createElement('span');
+    var spanOutput = document.createElement('span')
     // create text node for i
-    var outputContent = document.createTextNode(outputText);
+    var outputContent = document.createTextNode(outputText)
     // set span class to given arg
-    spanOutput.className = type;
+    spanOutput.className = type
     // append outputcontent (outputtext node) to span
-    spanOutput.appendChild(outputContent);
+    spanOutput.appendChild(outputContent)
     // append span to main output div
-    outputMain.appendChild(spanOutput);
+    outputMain.appendChild(spanOutput)
   }
-}());
+})()
