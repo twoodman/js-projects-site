@@ -1,7 +1,7 @@
-/* MAIN PROJECTS STYLES */
-.main__projects {
+/* PROJECTS WRAPPER STYLES */
+.projects__wrapper {
   max-width: 980px;
-  margin: 0 auto;
+  margin: 50px auto;
   height: 100%;
   .projects__inner {
     text-align: center;
@@ -21,7 +21,7 @@
     }
     a {
       @include transition-property(box-shadow, border, transform);
-      @include transition-duration(200ms, 200ms, 200ms);
+      @include transition-duration(50ms, 50ms, 50ms);
       @include transition-timing-function(ease);
       @include border-radius(3px);
       @include box-shadow(inset 0 0 0 2px $color-button-border);
